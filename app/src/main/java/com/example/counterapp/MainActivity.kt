@@ -10,7 +10,7 @@ import com.example.counterapp.view.CounterView
 
 class MainActivity() : AppCompatActivity(), CounterView {
     lateinit var binding: ActivityMainBinding
-    private val presenter=Presenter()
+    private val presenter=Injector.getPresenter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)

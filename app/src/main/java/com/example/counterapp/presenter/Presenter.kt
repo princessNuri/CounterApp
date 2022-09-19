@@ -1,10 +1,11 @@
 package com.example.counterapp.presenter
 
+import com.example.counterapp.Injector
 import com.example.counterapp.model.CounterModel
 import com.example.counterapp.view.CounterView
 
 class Presenter {
-    private val model=CounterModel()
+    private val model=Injector.getModel()
     lateinit var view:CounterView
 
     fun incrementCount(){
